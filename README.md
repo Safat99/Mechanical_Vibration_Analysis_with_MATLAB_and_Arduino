@@ -20,9 +20,15 @@ The main task is for this project is to find the car's (test object) vibration a
 * veroboard, male headers, jumper cable, soldering iron etc.
 * 5V power-supply, can be a power-bank, or battery. (I used laptop's usb output as powering the setup) 
 * Vibration speaker (I didn't have any. but it is very useful for check the results for a given frequency)
+
+### Circuit Diagram
+Circuit Diagram is maded with [circuito.io](https://www.circuito.io/) an easy readymade drag and drop circuit design app
+![](https://github.com/Safat99/Mechanical_Vibration_Analysis_with_MATLAB_and_Arduino/blob/main/imp_outputs/circuit_diagram.png)
+
 ### The main setup 
 The whole device looked like this.
 ![](output_vdos_and_pics/main_setup1.jpeg)
+
 
 ### The main operations and Results
 To obtain the task, first the sensors data is collected from Arduino IDE's serial monitor. Then it is stored as csv file and MATLAB will read that csv as table. Then by applying **gaussian smooth** and **bandpass filter** the noises from the signal is reduced and the signal is looked like this:
