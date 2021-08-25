@@ -24,13 +24,22 @@ The main task is for this project is to find the car's (test object) vibration a
 The whole device looked like this.
 ![](output_vdos_and_pics/main_setup1.jpeg)
 
-### The main operations
+### The main operations and Results
 To obtain the task, first the sensors data is collected from Arduino IDE's serial monitor. Then it is stored as csv file and MATLAB will read that csv as table. Then by applying **gaussian smooth** and **bandpass filter** the noises from the signal is reduced and the signal is looked like this:
 
 ![](https://github.com/Safat99/Mechanical_Vibration_Analysis_with_MATLAB_and_Arduino/blob/main/output_vdos_and_pics/graph%20outputs/after_bandpass.jpg)
 
 
-then applying **fast fourier transform** the signal will shift from **Time Domain** to **Frequency Domain**. The frequency which has the peak power will be the natural measured frequency and rest of the frequencies are the noises.
+then applying **fast fourier transform** the signal will shift from **Time Domain** to **Frequency Domain**. The frequency which has the peak power will be the natural measured frequency and rest of the frequencies are the noises.Check the [imp_outputs](imp_outputs/) folder's images for the details outputs.
 
-And finally the another custom method for finding frequency is done by excel in [here](test_data/workbench.xlsx). And for different pressure of tire the differnet frequencies are found for both front and back sensors. 
+![](https://github.com/Safat99/Mechanical_Vibration_Analysis_with_MATLAB_and_Arduino/blob/main/imp_outputs/smooth_back_fourier_result1.jpg)
 
+And finally the another custom method for finding frequency is done by excel in [here](test_data/workbench.xlsx). And for different pressure of tire the differnet frequencies had found for both front and back sensors. The ouput of the final figures for different pressure is 
+
+![](https://github.com/Safat99/Mechanical_Vibration_Analysis_with_MATLAB_and_Arduino/blob/main/output_vdos_and_pics/graph%20outputs/combined_back.png)
+
+### Findings 
+from all the figures and the graphs the vibration of the **car (where the sensor is placed)** was vaired because of several reasons inlcuding:
+* acceleration and deacceleration of car
+* noise of the sensors ( for the higher frequency we can see the noises )
+* road defects and others 
