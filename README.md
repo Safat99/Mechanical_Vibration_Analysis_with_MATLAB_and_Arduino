@@ -13,7 +13,6 @@ The main task is for this project is to find the car's (test object) vibration a
 * To know how to work with ADXL335 sensor, this [LastMinuteEngineers](https://lastminuteengineers.com/adxl335-accelerometer-arduino-tutorial/) tutorial is very much helpful. 
 * Check the [ADXL335 datasheet](ADXL335.pdf)
 
- 
 ### Components
 * Arduino
 * ADXL335 3-axis accelerometer (minimum 2 for comparing outputs)
@@ -24,3 +23,14 @@ The main task is for this project is to find the car's (test object) vibration a
 ### The main setup 
 The whole device looked like this.
 ![](output_vdos_and_pics/main_setup1.jpeg)
+
+### The main operations
+To obtain the task, first the sensors data is collected from Arduino IDE's serial monitor. Then it is stored as csv file and MATLAB will read that csv as table. Then by applying **gaussian smooth** and **bandpass filter** the noises from the signal is reduced and the signal is looked like this:
+
+![](https://github.com/Safat99/Mechanical_Vibration_Analysis_with_MATLAB_and_Arduino/blob/main/output_vdos_and_pics/graph%20outputs/after_bandpass.jpg)
+
+
+then applying **fast fourier transform** the signal will shift from **Time Domain** to **Frequency Domain**. The frequency which has the peak power will be the natural measured frequency and rest of the frequencies are the noises.
+
+And finally the another custom method for finding frequency is done by excel in [here](test_data/workbench.xlsx). And for different pressure of tire the differnet frequencies are found for both front and back sensors. 
+
