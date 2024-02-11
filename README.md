@@ -1,8 +1,9 @@
 # Mechanical_Vibration_Analysis_with_MATLAB_and_Arduino
 This is a real-time project where I used ADXL335, a 3-axis-accelerometer to measure unknown vibrations and then analyze them in Matlab and plot them in Excel
 
-I uploaded the project video as this [Linkedin post](https://www.linkedin.com/posts/sarker-safat-mahmud-safat99_matlab-arduinoproject-vibrationanalysis-activity-6836175024676843520-7reA).
-You can check for the demonstration and... Enjoy!!!
+I uploaded the project video as this [Linkedin post](https://www.linkedin.com/posts/sarker-safat-mahmud-safat99_matlab-arduinoproject-vibrationanalysis-activity-6836175024676843520-7reA) and
+also uploaded in the following [YouTube Video](https://youtu.be/p5eDBFT5zkI?si=aFrbFpLX9Xss_8cV)
+You can check it for the demonstration and... Enjoy!!!
 
 ### The Main Objectives:
 The main task of this project is to find the car's (test object) vibration and analyze all the outputs. With a similar setup and codes, any kind of mechanical vibration of an object can be found.
